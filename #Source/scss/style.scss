@@ -1,0 +1,61 @@
+@import "_nullstyle.scss";
+//////////////////////////
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   margin: 0;
+   background-color: #988c8c;
+}
+
+.magic-ball {
+   text-align: center;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+.ball-image {
+   max-width: 300px;
+   max-height: 300px;
+}
+
+#ask-button {
+   font-size: 18px;
+   margin-top: 20px;
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+#answer {
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-top: 20px;
+   font-size: 18px;
+   font-weight: bold;
+   color: #f0f0f0;
+}
+
+
+@keyframes shake {
+   0%, 100% {
+       transform: translateX(0);
+   }
+   10%, 30%, 50%, 70%, 90% {
+       transform: translateX(-5px);
+   }
+   20%, 40%, 60%, 80% {
+       transform: translateX(5px);
+   }
+}
+
+.shake {
+   animation: shake 0.5s ease-in-out;
+}
